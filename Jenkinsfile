@@ -14,9 +14,6 @@ pipeline {
     }
 
     stage('Test') {
-      environment {
-        CI = 'true'
-      }
       steps {
         sh 'echo test'
       }
@@ -30,5 +27,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    CI = 'true'
   }
 }
